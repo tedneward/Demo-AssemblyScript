@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <script type="module">
-import { add } from "./build/release.js";
-document.body.innerText = add(1, 2);
+import { sayHello, add } from "./build/release.js";
+document.body.innerText = sayHello("Fred") + " Did you know that 1 + 2 is " + add(1, 2);
 </script>
 </head>
 <body></body>
