@@ -1,0 +1,33 @@
+{
+  "name": "syntax",
+  "version": "1.0.0",
+  "description": "A collection of AssemblyScript syntax examples",
+  "homepage": "https://github.com/tedneward/Demo-AssemblyScript#readme",
+  "bugs": {
+    "url": "https://github.com/tedneward/Demo-AssemblyScript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tedneward/Demo-AssemblyScript.git"
+  },
+  "license": "ISC",
+  "author": "Ted Neward",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests",
+    "asbuild:debug": "asc assembly/*.ts --target debug",
+    "asbuild:release": "asc assembly/*.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.28.2"
+  },
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  }
+}
